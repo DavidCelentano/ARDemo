@@ -1,0 +1,38 @@
+[
+    {
+        "modelName": "candle",
+        "displayName": "Candle",
+        "particleScaleInfo": {"flame": 0.018 }
+    },
+     {
+         "modelName": "billboard",
+         "displayName": "Billboard",
+         "particleScaleInfo": { }
+     },
+     {
+         "modelName": "spire",
+         "displayName": "Spire",
+         "particleScaleInfo": { }
+     },
+    {
+        "modelName": "cup",
+        "displayName": "Cup",
+        "particleScaleInfo": { }
+    },
+    {
+        "modelName": "vase",
+        "displayName": "Vase",
+        "particleScaleInfo": { }
+    },
+    {
+        "modelName": "lamp",
+        "displayName": "Lamp",
+        "particleScaleInfo": { }
+    },
+    {
+        "modelName": "chair",
+        "displayName": "Chair",
+        "particleScaleInfo": { }
+    },
+]
+ 
