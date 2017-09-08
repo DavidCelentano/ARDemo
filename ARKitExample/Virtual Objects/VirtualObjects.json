@@ -10,6 +10,11 @@
          "particleScaleInfo": { }
      },
      {
+         "modelName": "lightSource",
+         "displayName": "lightSource",
+         "particleScaleInfo": { }
+     },
+     {
          "modelName": "spire",
          "displayName": "Spire",
          "particleScaleInfo": { }

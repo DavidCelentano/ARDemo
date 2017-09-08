@@ -34,7 +34,7 @@ class VirtualObject: SCNReferenceNode, ReactsToScale {
     
     init(definition: VirtualObjectDefinition) {
         self.definition = definition
-        if definition.displayName == "Billboard" || definition.displayName == "Spire" {
+        if definition.displayName == "Spire" {
             guard let url = Bundle.main.url(forResource: "Models.scnassets/\(definition.modelName)/\(definition.modelName)", withExtension: "dae")
                 else { fatalError("can't find expected virtual object bundle resources") }
             super.init(url: url)!

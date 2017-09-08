@@ -58,14 +58,19 @@ class VirtualObjectManager {
 	
 	private func unloadVirtualObject(_ object: VirtualObject) {
 		updateQueue.async {
-			object.unload()
-			object.removeFromParentNode()
-			if self.lastUsedObject == object {
-				self.lastUsedObject = nil
-				if self.virtualObjects.count > 1 {
-					self.lastUsedObject = self.virtualObjects[0]
-				}
-			}
+            object.light = SCNLight()
+            object.light!.type = .spot
+            object.light!.intensity = 14358.902
+            object.position = SCNVector3(0, 2.3, 0)
+            object.eulerAngles = SCNVector3(-90, 0, 0)
+//            object.unload()
+//            object.removeFromParentNode()
+//            if self.lastUsedObject == object {
+//                self.lastUsedObject = nil
+//                if self.virtualObjects.count > 1 {
+//                    self.lastUsedObject = self.virtualObjects[0]
+//                }
+//            }
 		}
 	}
 	
@@ -73,6 +78,13 @@ class VirtualObjectManager {
 	
 	func loadVirtualObject(_ object: VirtualObject, to position: float3, cameraTransform: matrix_float4x4) {
 		self.virtualObjects.append(object)
+//        let lightNode = SCNNode()
+//        lightNode.light = SCNLight()
+//        lightNode.light!.type = .spot
+//        lightNode.light!.intensity = 14358.902
+//        lightNode.position = SCNVector3(0, 2.3, 0)
+//        lightNode.eulerAngles = SCNVector3(-90, 0, 0)
+        
 		self.delegate?.virtualObjectManager(self, willLoad: object)
 		
 		// Load the content asynchronously.
